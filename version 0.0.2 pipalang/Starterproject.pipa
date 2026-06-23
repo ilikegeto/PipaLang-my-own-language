@@ -1,0 +1,29 @@
+//calculator
+int main() {
+    int option;
+    int a;
+    int b;
+    array_str theOption = {"1. Add(+)", "2. Subtract(-)", "3. Multiply(*)", "4. Divide(/)"};
+    for (int i = 0; i < theOption.size(); i++){
+        value.scr_nextl(theOption[i]);
+    }
+
+    value.scr("chose your option: ");
+    value.in(option);
+
+    value.scr("write first number: ");
+    value.in(a);
+
+    value.scr("write second number: ");
+    value.in(b);
+
+    if (option == 1){
+        value.scr_nextl(a + b);
+    } elif (option == 2) {
+        value.scr_nextl(a - b);
+    } elif (option == 3) {
+        value.scr_nextl(a * b);
+    } elif (option == 4) {
+        value.scr_nextl(a / b);
+    } else {value.scr_nextl("invalid");}
+}
