@@ -1,0 +1,68 @@
+//basic vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+
+//some note for you vvv
+
+Now PipeLang use .Pipe not .cpp again!
+use PipaLangfileGenerator.cpp to generate your file"
+don't forget to download PipaLangbase.cpp and pipacompiler.cpp too
+
+//cout vvv
+
+value.scr("your text\n"); //<- string or str
+value.scr_nextl(1); //<- number or int
+
+value.scr_nextl("your text"); //<- enter without "\n"
+
+str replacethis = "World, Hello";
+value.replace(replacethis, "World, Hello", "Hello, World\n"); //<- (your text, "text you want to replace", "your replace text")
+
+//user input vvv
+
+str textInput;
+value.scr("write your text: ");
+value.in(textInput); //<- in for input value from user
+
+int numberInput;
+value.scr("write your number: ");
+value.in(numberInput);
+
+//variables vvv
+
+int myNumber = 10; //<- int variables
+
+str mytext = "\nPipe"; //<- str variables
+
+//if/elif/else vvv
+
+if (myNumber == 10){
+  value.scr_nextl("myNumber = 10!");
+} elif (mytext == "Pipe") { //<- elif is else if like python
+  value.scr_nextl("mytext = \"Pipe\"!");
+} else{value.scr_nextl("else!");} //<- you can do this in one line too!
+
+//array vvv
+
+array_str mystrArray = {"Hello", "World"}; //<- array string or str
+for (int i = 0; i < mystrArray.size(); i++){value.scr(mystrArray[i]); value.scr(", ");} //<- you can use array in loop too
+
+array_int myintArray = {1, 2, 3, 4, 5}; //<- array number or int
+for (int i = 0; i < myintArray.size(); i++){value.scr(myintArray[i]); value.scr(", ");} //<- you can use array in loop too
+
+//ver 0.1.0
+
+// type vvv
+
+str myType = "12345";
+int myTypetwo = 12345;
+value.scr_nextl(value.type(myType));
+value.scr_nextl(value.type(myTypetwo));
+
+// new type
+
+float myfloat = 3.14;
+
+double mydouble = 5.123456789101112;
+
+    // leng()
+    str myleng = "Hello World";
+    value.scr_nextl(leng(myleng)); //<- length()
